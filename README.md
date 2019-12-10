@@ -1,22 +1,22 @@
-# timeout-controller
+# timeout-abort-controller
 
-[![Build Status](https://travis-ci.org/jacobheun/timeout-controller.svg?branch=master)](https://travis-ci.org/jacobheun/timeout-controller) [![dependencies Status](https://david-dm.org/jacobheun/timeout-controller/status.svg)](https://david-dm.org/jacobheun/timeout-controller) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/jacobheun/timeout-abort-controller.svg?branch=master)](https://travis-ci.org/jacobheun/timeout-abort-controller) [![dependencies Status](https://david-dm.org/jacobheun/timeout-abort-controller/status.svg)](https://david-dm.org/jacobheun/timeout-abort-controller) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > An AbortController that aborts after a specified timeout.
 
-`timeout-controller` uses [`retimer`](https://github.com/mcollina/retimer) internally to help reduce the impact of having numerous timers running.
+`timeout-abort-controller` uses [`retimer`](https://github.com/mcollina/retimer) internally to help reduce the impact of having numerous timers running.
 
 ## Install
 
 ```
-npm install timeout-controller
+npm install timeout-abort-controller
 ```
 
 ## Usage
 
 ```js
 const AbortController = require('abort-controller')
-const TimeoutController = require('timeout-controller')
+const TimeoutController = require('timeout-abort-controller')
 const anySignal = require('any-signal')
 
 const userController = new AbortController()

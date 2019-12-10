@@ -1,5 +1,5 @@
 {
-  "name": "timeout-controller",
+  "name": "timeout-abort-controller",
   "version": "1.0.0",
   "description": "An AbortController that aborts after a specified timeout",
   "main": "index.js",
@@ -30,10 +30,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jacobheun/timeout-controller.git"
+    "url": "git+https://github.com/jacobheun/timeout-abort-controller.git"
   },
   "bugs": {
-    "url": "https://github.com/jacobheun/timeout-controller/issues"
+    "url": "https://github.com/jacobheun/timeout-abort-controller/issues"
   },
-  "homepage": "https://github.com/jacobheun/timeout-controller#readme"
+  "homepage": "https://github.com/jacobheun/timeout-abort-controller#readme"
 }
