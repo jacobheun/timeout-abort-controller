@@ -53,8 +53,8 @@ Aborts the controller and clears the internal timeout.
 
 ## Related
 
-[`abort-controller`](https://github.com/mysticatea/abort-controller)
-[`any-signal`](https://github.com/jacobheun/any-signal) Combines an array of AbortSignals into a single signal.
+- [`abort-controller`](https://github.com/mysticatea/abort-controller)
+- [`any-signal`](https://github.com/jacobheun/any-signal) Combines an array of AbortSignals into a single signal.
 
 ## LICENSE
 
