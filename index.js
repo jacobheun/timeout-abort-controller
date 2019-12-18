@@ -8,6 +8,7 @@ class TimeoutController extends AbortController {
    */
   constructor (ms) {
     super()
+    this._ms = ms
     this._timer = retimer(() => this.abort(), ms)
   }
 
@@ -24,6 +25,14 @@ class TimeoutController extends AbortController {
    */
   clear () {
     this._timer.clear()
+  }
+
+  /**
+   * Resets the timer
+   */
+  reset () {
+    this._timer.clear()
+    this._timer = retimer(() => this.abort(), this._ms)
   }
 }
 

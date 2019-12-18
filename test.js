@@ -40,3 +40,16 @@ test('can clear the timeout', async t => {
 
   t.is(timeoutController.signal.aborted, false)
 })
+
+test('can reset the timeout', async t => {
+  const timeoutController = new TimeoutController(50)
+
+  await delay(30)
+  timeoutController.reset() // now expires at 80
+
+  await delay(30)
+  t.is(timeoutController.signal.aborted, false) // should not have expired at 60
+
+  await delay(30)
+  t.is(timeoutController.signal.aborted, true) // should have now expired at 90
+})
