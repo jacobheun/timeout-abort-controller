@@ -51,6 +51,10 @@ Clears the internal timer.
 
 Aborts the controller and clears the internal timeout.
 
+### `timeoutController.reset()`
+
+Clears the timer and sets the internal timeout to occur after the `ms` timeout it was created with.
+
 ## Related
 
 - [`abort-controller`](https://github.com/mysticatea/abort-controller)
