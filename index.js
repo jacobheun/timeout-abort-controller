@@ -1,4 +1,4 @@
-const AbortController = require('abort-controller')
+const { AbortController } = require('abort-controller')
 const retimer = require('retimer')
 
 class TimeoutController extends AbortController {
