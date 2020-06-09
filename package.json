@@ -7,7 +7,11 @@
     "index.js"
   ],
   "scripts": {
-    "test": "npm run lint && nyc --reporter=lcov --reporter=text ava --verbose",
+    "test": "npm run lint && nyc --reporter=lcov --reporter=text tape test.js",
+    "test:browser": "npm run test:chrome && npm run test:firefox && npm run test:webkit",
+    "test:chrome": "playwright-test test.js --browser chromium --runner tape",
+    "test:firefox": "playwright-test test.js --browser firefox --runner tape",
+    "test:webkit": "playwright-test test.js --browser webkit --runner tape",
     "lint": "standard"
   },
   "keywords": [],
@@ -18,10 +22,11 @@
     "retimer": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "^3.8.2",
     "delay": "^4.3.0",
     "nyc": "^15.0.1",
-    "standard": "^14.3.1"
+    "playwright-test": "^0.7.1",
+    "standard": "^14.3.1",
+    "tape": "^5.0.1"
   },
   "repository": {
     "type": "git",

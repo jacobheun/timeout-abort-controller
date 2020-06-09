@@ -1,4 +1,12 @@
-const { AbortController } = require('abort-controller')
+/* globals self, window */
+'use strict'
+
+// Get around https://github.com/mysticatea/abort-controller/pull/22
+const { AbortController } =
+  typeof self !== 'undefined' ? self
+    : typeof window !== 'undefined' ? window
+    /* otherwise */ : require('abort-controller')
+
 const retimer = require('retimer')
 
 class TimeoutController extends AbortController {
@@ -10,6 +18,8 @@ class TimeoutController extends AbortController {
     super()
     this._ms = ms
     this._timer = retimer(() => this.abort(), ms)
+    // Patch for safari not supported extending built in classes
+    Object.setPrototypeOf(this, TimeoutController.prototype)
   }
 
   /**
