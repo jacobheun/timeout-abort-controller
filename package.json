@@ -1,6 +1,6 @@
 {
   "name": "timeout-abort-controller",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An AbortController that aborts after a specified timeout",
   "main": "index.js",
   "files": [
