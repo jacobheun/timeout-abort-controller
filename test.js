@@ -1,5 +1,5 @@
 const test = require('tape')
-const TimeoutController = require('./')
+const { TimeoutController } = require('./')
 const delay = require('delay')
 
 const callCounter = () => {
