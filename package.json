@@ -20,8 +20,6 @@
   "author": "Jacob Heun",
   "license": "MIT",
   "dependencies": {
-    "abort-controller": "^3.0.0",
-    "native-abort-controller": "^1.0.4",
     "retimer": "^3.0.0"
   },
   "devDependencies": {
