@@ -1,6 +1,6 @@
 'use strict'
 
-const { AbortController } = require('native-abort-controller')
+const { AbortController } = globalThis
 
 // @ts-expect-error no types
 const retimer = require('retimer')
